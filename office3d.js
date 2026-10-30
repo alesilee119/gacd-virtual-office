@@ -6,13 +6,13 @@ const Q=new URLSearchParams(location.search);
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const hour=()=>{const h=Q.get('hour');if(h!==null&&h!=='')return parseFloat(h);const d=new Date();return d.getHours()+d.getMinutes()/60};
 const TEAM=[
- {id:'cto',name:'CTO Alex',role:'CTO: code, pull requests and cloud infrastructure.',status:'Reviewing code and pull requests',color:'#2b57c9',shirt:0x2a3f8a,hair:0x3a2418,skin:0xf1c9a0,desk:[-7,-4.5],face:Math.PI,
+ {id:'cto',name:'CTO Alex',role:'Builds and runs GACD\'s tech.',status:'Reviewing code and pull requests',color:'#2b57c9',shirt:0x2a3f8a,hair:0x3a2418,skin:0xf1c9a0,desk:[-7,-4.5],face:Math.PI,
   lines:['Back to coding 💻','Merging a PR ✅','Checking cloud servers ☁️','Patching network security 🔒','Testing an IoT sensor 📡']},
- {id:'cfo',name:'CFO Alex',role:'CFO: finance, costs and the daily stock report around 4:30 PM ET.',status:'Tracking US top gainers and MRVL',color:'#1f8a4c',shirt:0x2f7a4d,hair:0x1a1410,skin:0xe8b88a,desk:[7,-4.5],face:Math.PI,
+ {id:'cfo',name:'CFO Alex',role:'Keeps GACD\'s finances sharp and growing.',status:'Tracking US top gainers and MRVL',color:'#1f8a4c',shirt:0x2f7a4d,hair:0x1a1410,skin:0xe8b88a,desk:[7,-4.5],face:Math.PI,
   lines:['Tracking US top gainers 📈','Watching MRVL 👀','Checking costs 💰','Stock report at 4:30 PM ET 📊']},
- {id:'mkt',name:'Marketing Connie',role:'Marketing: campaigns, social posts and startup networking.',status:'Scouting Ontario IoT, cloud, network, AI and security opportunities',note:'Daily report goes out around 1 PM',color:'#c23d8a',shirt:0xd2569a,hair:0x6a3a1a,skin:0xf3cfae,desk:[-7,3.5],face:0,long:1,
+ {id:'mkt',name:'Marketing Connie',role:'Finds GACD\'s next opportunity and tells its story.',status:'Scouting Ontario IoT, cloud, network, AI and security opportunities',note:'Daily report goes out around 1 PM',color:'#c23d8a',shirt:0xd2569a,hair:0x6a3a1a,skin:0xf3cfae,desk:[-7,3.5],face:0,long:1,
   lines:['Drafting a social post ✍️','Planning the next campaign 📣','Scouting Ontario AI startups 🔎','IoT & cloud events this week 📅','Daily report around 1 PM 📝']},
- {id:'adm',name:'Admin Agnes',role:'Admin: calendar, inbox and scheduling.',status:'Preparing the daily 7:30 AM schedule and agenda',color:'#b8641f',shirt:0xe08a3c,hair:0x2a1a12,skin:0xd9a27a,desk:[7,3.5],face:0,long:1,
+ {id:'adm',name:'Admin Agnes',role:'Keeps the calendar, inbox and day on track.',status:'Preparing the daily 7:30 AM schedule and agenda',color:'#b8641f',shirt:0xe08a3c,hair:0x2a1a12,skin:0xd9a27a,desk:[7,3.5],face:0,long:1,
   lines:['Preparing the 7:30 AM agenda 🗓️','Sorting the inbox 📬','Booking a meeting room 📅','Checking the mail ✉️']}];
 /* ---------- scene ---------- */
 const box=$('#view3d');
@@ -37,7 +37,7 @@ const wallM=M(0xece6f6);B(28,4,.3,wallM,0,2,-10);B(.3,4,20,wallM,-14,2,0);
 // windows on back wall
 const winMats=[];for(const x of[-9,-3,3,9]){B(4.4,2.4,.1,0x5a3d28,x,2.4,-9.82);const g=new THREE.MeshBasicMaterial({color:0x9fd3f7});winMats.push(g);B(4,2,.1,g,x,2.4,-9.78)}
 // welcome banner + logo sign
-const ban=new THREE.Mesh(new THREE.PlaneGeometry(12,1.1),new THREE.MeshBasicMaterial({map:labelTex('WELCOME TO GACD TECHNOLOGY','#ffcc33','#1b1b2f',1024,96,34)}));ban.position.set(0,3.95,-9.8);scene.add(ban);
+const ban=new THREE.Mesh(new THREE.PlaneGeometry(12,1.1),new THREE.MeshBasicMaterial({map:labelTex('WELCOME TO GACD TECHNOLOGY:\nBUILDING ONTARIO\'S IOT, CLOUD, NETWORK,\nAI AND SECURITY FUTURE','#ffcc33','#1b1b2f',1536,240,34)}));ban.scale.y=1.8;ban.position.set(0,4.6,-9.7);scene.add(ban);
 const logo=new THREE.Mesh(new THREE.PlaneGeometry(3.2,1.6),new THREE.MeshBasicMaterial({map:labelTex('LOGO\nHERE','#f4efe2','#2b2340',512,256,56)}));logo.position.set(-13.8,2.4,3.5);logo.rotation.y=Math.PI/2;scene.add(logo);
 // partitions (low)
 B(.15,1.1,5,0xbfb6d8,-1.6,.55,-5.5);B(.15,1.1,5,0xbfb6d8,1.6,.55,-5.5);B(.15,1.1,4,0xbfb6d8,-1.6,.55,4.5);B(.15,1.1,4,0xbfb6d8,1.6,.55,4.5);

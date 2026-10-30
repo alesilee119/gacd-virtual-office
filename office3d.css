@@ -1,4 +1,4 @@
-.welcome{background:#ffcc33;color:#1b1b2f;font:12px "Press Start 2P",monospace;text-align:center;padding:10px;line-height:1.6;border-bottom:4px solid #1b1b2f}
+.welcome{background:#ffcc33;color:#1b1b2f;text-transform:uppercase;font:12px "Press Start 2P",monospace;text-align:center;padding:10px;line-height:1.6;border-bottom:4px solid #1b1b2f}
 .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px 14px;background:#0d0b1f}
 .st{background:#221e40;border:3px solid #4a4470;padding:8px;cursor:pointer;color:#f4efe2;text-align:left;font:22px "VT323",monospace}
 .st b{display:block;font:10px "Press Start 2P",monospace;line-height:1.5}.st i{font-style:normal;color:#46e06a;font-size:20px}.st span{display:block;color:#c9c3ee;font-size:20px}
