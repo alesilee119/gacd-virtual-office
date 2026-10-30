@@ -1,16 +1,21 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>GACD Technology — 3D Virtual Office</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="fonts/fonts.css"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="office3d.css"></head><body>
-<header class="top"><div class="logo-slot" title="Logo placeholder — replace with your logo">[LOGO]</div><div class="brand">GACD TECHNOLOGY<small>3D VIRTUAL OFFICE</small></div>
-<nav><button class="pxb" data-open="tasks">TASKS</button><button class="pxb alt" data-open="contact">REQUEST</button><a class="pxb ghost" href="pixel.html">PIXEL VIEW</a></nav></header>
-<div class="welcome">Welcome to GACD Technology: building Ontario's IoT, cloud, network, AI and security future.</div>
-<div id="strip" class="strip" aria-label="Team status"></div>
-<main><div id="view3d"><div id="tags"></div><div class="hint3d">DRAG TO LOOK AROUND · PINCH / SCROLL TO ZOOM</div></div></main>
-<div class="overlay" id="tasks" hidden><div class="panel wide"><button class="x" data-close aria-label="Close">X</button><h2>TASK BOARD</h2>
-<form id="tf" class="row"><input id="tt" placeholder="What needs doing?" required><select id="ta"><option>CTO Alex</option><option>CFO Alex</option><option>Marketing Connie</option><option>Admin Agnes</option></select><button class="pxb">ADD</button></form>
-<div class="cols"><div class="col" data-s="todo"><h4>TO DO</h4><div class="list"></div></div><div class="col" data-s="doing"><h4>IN PROGRESS</h4><div class="list"></div></div><div class="col" data-s="done"><h4>DONE</h4><div class="list"></div></div></div>
-<p class="muted small">Saved in this browser only.</p></div></div>
-<div class="overlay" id="contact" hidden><div class="panel"><button class="x" data-close aria-label="Close">X</button><h2>SEND A REQUEST</h2>
-<form id="cf" class="stack"><input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Email" required><select name="to"><option>CTO Alex</option><option>CFO Alex</option><option>Marketing Connie</option><option>Admin Agnes</option></select><textarea name="msg" placeholder="How can we help?" required></textarea><button class="pxb">SAVE REQUEST</button><p id="cm" class="muted small"></p></form>
-<p class="muted small">Phone: [Placeholder] · Email: [Placeholder] · Address: [Placeholder]<br>Requests are stored locally only — nothing is sent.</p></div></div>
-<footer>© <span id="y"></span> GACD TECHNOLOGY · VIRTUAL OFFICE</footer>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d0f14">
+<title>GACD Technology — Virtual Office</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="office3d.css"></head><body>
+<header class="hd"><div class="logo-slot" title="Logo placeholder — replace with your logo">LOGO</div><div class="brand"><b>GACD Technology</b><small>Virtual Office</small></div>
+<nav><button class="nb" data-open="tasks">Task board</button><button class="nb" data-open="contact">Request</button><a class="nb" href="pixel.html">Pixel view</a></nav></header>
+<p class="welcome">Welcome to GACD Technology: building Ontario's IoT, cloud, network, AI and security future.</p>
+<section class="wrap">
+<form id="cmd" class="cmd"><input id="cmdt" placeholder="Assign a task to…" required aria-label="Task"><select id="cmda" aria-label="Assign to"><option>CTO Alex</option><option>CFO Alex</option><option>Marketing Connie</option><option>Admin Agnes</option></select><button class="disp">Dispatch</button></form>
+<div class="chips"><span class="chip"><i class="d g"></i>Working <b id="nW">0</b></span><span class="chip"><i class="d o"></i>Outputs <b id="nO">0</b></span><span class="chip"><i class="d y"></i>Waiting <b id="nT">0</b></span></div>
+<div id="view3d"><div id="tags"></div><div class="hint3d">Drag to turn · pinch or scroll to zoom · tap the board or mailbox</div></div>
+<div class="log"><h3>Activity</h3><ul id="log"></ul></div>
+<div id="cards" class="cards"></div>
+<p class="note">File chips are example outputs for illustration only. Tasks and requests are saved in this browser only.</p>
+</section>
+<div class="overlay" id="tasks" hidden><div class="panel wide"><button class="x" data-close aria-label="Close">✕</button><h2>Task board</h2>
+<form id="tf" class="row"><input id="tt" placeholder="What needs doing?" required><select id="ta"><option>CTO Alex</option><option>CFO Alex</option><option>Marketing Connie</option><option>Admin Agnes</option></select><button class="disp">Add</button></form>
+<div class="cols"><div class="col" data-s="todo"><h4>To do</h4><div class="list"></div></div><div class="col" data-s="doing"><h4>In progress</h4><div class="list"></div></div><div class="col" data-s="done"><h4>Done</h4><div class="list"></div></div></div></div></div>
+<div class="overlay" id="contact" hidden><div class="panel"><button class="x" data-close aria-label="Close">✕</button><h2>Send a request</h2>
+<form id="cf" class="stack"><input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Email" required><select name="to"><option>CTO Alex</option><option>CFO Alex</option><option>Marketing Connie</option><option>Admin Agnes</option></select><textarea name="msg" placeholder="How can we help?" required></textarea><button class="disp">Save request</button><p id="cm" class="muted"></p></form>
+<p class="muted">Phone: [Placeholder] · Email: [Placeholder] · Address: [Placeholder]<br>Requests are stored locally only — nothing is sent.</p></div></div>
+<footer>© <span id="y"></span> GACD Technology · Virtual Office</footer>
 <script type="module" src="office3d.js"></script></body></html>
